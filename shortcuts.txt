@@ -1,0 +1,111 @@
+-------------------------
+      Navigation
+-------------------------
+C-v | The same as PgDn
+M-v | The same as PgUp
+The two command above use lines and not amount of screens as numeric argument
+C-l | Reload text and move cursor to the middle of the screen, toggle between middle top and bottom
+C-p | Previous line
+C-n | Next line
+C-b | Move backward
+C-f | Move forward
+M-f | Move one word forward
+M-b | Move one word backward
+C-a | Beginning of a line
+C-e | End of a line
+M-a | Beginning of a sentence
+M-e | End of a sentence
+M-< | Beginning of the whole text
+M-> | End of the whole text
+
+-------------------------
+      Buffers
+-------------------------
+C-x C-b | List Buffers
+C-x b | Fine a file from buffer
+C-x s | Save some buffers
+C-x k | Kill current buffer
+
+-------------------------
+ Copy cut paste delete
+-------------------------
+M-w | Copy marked text without killing it
+C-y | Yanking
+M-y | If used after yanking, toggles the yanked text to previous killed texts, caan have negative numeric argument
+M-d | Delete character after cursor, this and <Del> kills instead if given an numeric argument
+M-<DEL> | Kill word before cursor
+M-d | Kill word after cursor
+C-k | Kill from cursor position to the end of the line, if nothing is on the cursor kills the line instead, numeric argument is number of lines deleted, killed text when repeating this command is stored together
+M-k | Kill from the cursor position to the end of the sentence
+C-<SPC> | Start marking between current position and cursor
+C-w | Kill marked text
+
+-------------------------
+  Windows and frames
+-------------------------
+C-1 | Kill all window but the one with active cursor
+C-z | Suspends emacs on non-graphical display, minimizes in graphical
+C-x 2 | Split window vertically
+C-x 3 | Split window horisontally
+C-x ^ | Make window higher
+C-x { | Make narrower
+C-x } | Make wider
+C-x - | Shrink window if bigger than buffer
+C-x + | Give windows the same height
+C-M-v | Scroll non-active window
+C-x o | Change active window
+C-x 4 C-f | Find and open in new window
+"make-frame" | Creates new frame
+"delete-frame" | Deletes current frame
+
+-------------------------
+   Exiting and saving
+-------------------------
+C-g | Stop command or inputting command
+C-x C-c | End emacs session
+
+-------------------------
+      Files
+-------------------------
+C-x f | Find file
+C-x C-s | Save file
+C-x 4 C-f | Find and open in new window
+
+-------------------------
+      Help
+-------------------------
+C-h ? | List help commands
+C-h c | Displays information about command
+C-h k | Displays documentation about command
+C-h f | Prompts name of the function to display help
+C-h a | List commands containing a keyword
+C-h v | List variables containing a keyword
+C-h i | Included manuals
+    m emacs | Read emacs manual
+    ? | Guided tour of info mode facilities
+C-h r | Read emacs manual (should read completion and dired)
+C-h m | View documentation about major mode
+
+C-u (number) or M-(number) | Numeric argument, without number after it multiplies next command with 4, C-u c-u = 16*, C-u C-u C-u = 64*
+C-/ or C-_ or C-x u | undo, can undo a undo if it is in the previous used command(for example after moving the cursor)
+C-s | Search, repeat for finding the next word that fits the search, <DEL> returns to previous words and deletes searched word when there is no previously searched words, <Return> terminates a search, the seaarch is terminated if another command is used
+C-r | Search reverse
+<ESC> <ESC> <ESC> | Exits recursive editing levels, eleminates extra windows, exits minibuffer and works like C-g
+C-x f | Change margin, useful for auto-fill-mode
+M-q | Update lines created before using margin
+M-x | Named command eXtend
+
+-------------------------
+      modes
+-------------------------
+  text-mode | standard for .txt files
+    auto-fill-mode | Breaks line to fit the margin
+	shell | shell emulator
+
+-----------
+  Shell
+-----------
+M-x shell | shell mode
+M-p or C-<up arrow> | previous command
+M-n or C-<down arrow> | next command
+C-c M-o | clear screen
