@@ -39,14 +39,19 @@ C-k | Kill from cursor position to the end of the line, if nothing is on the cur
 M-k | Kill from the cursor position to the end of the sentence
 C-<SPC> | Start marking between current position and cursor
 C-w | Kill marked text
+C-o | Make a empty line after current line
 
 -------------------------
   Windows and frames
 -------------------------
-C-1 | Kill all window but the one with active cursor
+C-x 1 | Kill all window but the one with active cursor
+C-x 5 1 | Kill all frames but the one with active cursor
 C-z | Suspends emacs on non-graphical display, minimizes in graphical
 C-x 2 | Split window vertically
 C-x 3 | Split window horisontally
+C-x 5 2 | Split frame
+C-x 0 | Delete this window
+C-x 5 0 | Delete this frame
 C-x ^ | Make window higher
 C-x { | Make narrower
 C-x } | Make wider
@@ -54,7 +59,13 @@ C-x - | Shrink window if bigger than buffer
 C-x + | Give windows the same height
 C-M-v | Scroll non-active window
 C-x o | Change active window
+C-x 5 o | Change active frame
 C-x 4 C-f | Find and open in new window
+C-x 4 C-f | Find and open in new frame
+C-x 4 d | Run dired in another window
+C-x 5 d | Run dired in another frame
+C-x 4 b | select buffer in another window
+C-x 5 b | select buffer in another frame
 "make-frame" | Creates new frame
 "delete-frame" | Deletes current frame
 
@@ -74,6 +85,7 @@ C-x 4 C-f | Find and open in new window
 -------------------------
       Help
 -------------------------
+C-h b | Current key bindings
 C-h ? | List help commands
 C-h c | Displays information about command
 C-h k | Displays documentation about command
@@ -94,6 +106,7 @@ C-r | Search reverse
 C-x f | Change margin, useful for auto-fill-mode
 M-q | Update lines created before using margin
 M-x | Named command eXtend
+M-q | quoted insert
 
 -------------------------
       modes
@@ -109,3 +122,25 @@ M-x shell | shell mode
 M-p or C-<up arrow> | previous command
 M-n or C-<down arrow> | next command
 C-c M-o | clear screen
+
+-----------
+  Eshell
+-----------
+M-x "eshell-display-predicate-help" or C-c M-q | help predicates
+M-x "eshell-display-modifiers-help" or C-c M-m | help modifiers
+--| Eshell commands
+| Eshell can run emacs commands or even run elisp when inside parentheses
+alias | Creates a alias for a command
+touch | Creates a file
+which | Executable location
+dired {files} | opens dired with selected files
+-- | Glob thing "*" filters, example *(.)
+. | Files
+/ | Directories
+r | Readable
+w | Writeable
+L | filtering based on file size
+m | Filtering based on modification time
+^ | Reverse
+
+for F in *  {echo "I like $F"}
