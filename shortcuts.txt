@@ -99,6 +99,7 @@ C-h r | Read emacs manual (should read completion and dired)
 C-h m | View documentation about major mode
 
 C-u (number) or M-(number) | Numeric argument, without number after it multiplies next command with 4, C-u c-u = 16*, C-u C-u C-u = 64*
+C-x z | run last command
 C-/ or C-_ or C-x u | undo, can undo a undo if it is in the previous used command(for example after moving the cursor)
 C-s | Search, repeat for finding the next word that fits the search, <DEL> returns to previous words and deletes searched word when there is no previously searched words, <Return> terminates a search, the seaarch is terminated if another command is used
 C-r | Search reverse
@@ -107,6 +108,7 @@ C-x f | Change margin, useful for auto-fill-mode
 M-q | Update lines created before using margin
 M-x | Named command eXtend
 M-q | quoted insert
+C-c C-v | open file outside emacs
 
 -------------------------
       modes
@@ -144,3 +146,8 @@ m | Filtering based on modification time
 ^ | Reverse
 
 for F in *  {echo "I like $F"}
+
+-----------
+  elisp
+-----------
+C-x C-e | evaluate elisp

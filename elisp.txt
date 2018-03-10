@@ -1,0 +1,14 @@
+list are parentheses with words
+if preceded by a "'" it will be treated as list with data
+strings
+without the first item will be a command like (+ 2 2) which will output 4 in this case
+elisp interpreter will show elisp debugger on error which can be exited using "q"
+"plus" or "+" | adding, any number of arguments
+"*" | multiplication, any number or arguments
+"consact" | concateating two character strings, any number of arguments
+"substring" | returns substring, arguments are: string, beginning (inclusive) and end (exclusive)
+"int-to-string" or "number-to-string" | converts a number to a string
+"number-or-marker" | returns ture or false based on if a variable isi a number or marker
+'hello or (quote hello) | creates a quote called hello
+"message" | echoes a message in the echo area
+1.8.5
