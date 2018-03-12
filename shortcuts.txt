@@ -151,3 +151,12 @@ for F in *  {echo "I like $F"}
   elisp
 -----------
 C-x C-e | evaluate elisp
+
+-----------
+rectangles
+-----------
+C-x r r | Copy rectangle
+C-x r k | Kill rectangle
+C-x r y | Yank rectangle
+C-x r o | Open rectangle shifting text right
+C-x r t | Prefix each line with a string
